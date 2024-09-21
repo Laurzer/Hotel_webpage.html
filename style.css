@@ -12,12 +12,12 @@ body {
   line-height: 1.7em;
 }
 
-a, p {
+a  {
   color: #fff;
   text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
   padding-bottom: 20px;
 }
 
@@ -31,6 +31,10 @@ h1, h2 {
 
 .text-primary {
   color: #b3ccd6;
+}
+
+.text-secondary {
+  color: #f7f7f7;
 }
 
 .btn {
@@ -52,6 +56,16 @@ h1, h2 {
 .bg-dark {
   background: #333;
   color: #fff;
+}
+
+.bg-dark-blue {
+  background: #1b1b1f;
+  color: #fff;
+}
+
+.bg-blue {
+  background: #b3ccd6;
+  color: #333;
 }
 
 /* navbar */
@@ -94,7 +108,7 @@ h1, h2 {
 #showcase {
   background: url(images/showcase.wallpaper.jpg) no-repeat center center/cover;
   height: 600px;
-  background-color: #414040;
+  background-color: #525a64;
 }
 
 #showcase .showcase-content {
@@ -135,6 +149,12 @@ h1, h2 {
   width: 50%;
   background: url(images/showcase.bg4.bottom.jpg) no-repeat;
   min-height: 100%;
-  
+ }
 
+ /* features */
+ #features .box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  text-align: center;
  }
