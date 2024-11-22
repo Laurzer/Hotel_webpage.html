@@ -200,8 +200,8 @@ h1, h2, h3 {
   clear: both;
  }
 
- /* about */
- #about-info .info-left {
+/* about */
+#about-info .info-left {
   float: left;
   width: 50%;
   min-height: 100%;
@@ -222,9 +222,10 @@ h1, h2, h3 {
 
 /* testimonials */
 #testimonials {
-  height: 600px;
+  height: auto; /* Let the testimonials container grow with content */
   background: url(images/showcase.bg6.bottom.jpg) no-repeat center center/cover;
   max-width: 100%;
+  padding: 30px 0; /* Add padding to create space around testimonials */
 }
 
 #testimonials h2 {
@@ -234,17 +235,42 @@ h1, h2, h3 {
 
 #testimonials .testimonial {
   padding: 20px;
-  margin: auto 200px 40px 30px;
+  margin: 20px auto; /* Adjust margin to be more centered */
   border-radius: 5px;
   opacity: 0.9;
+  /*background-color: rgba(0, 0, 0, 0.5); Optional: Background to make text more readable */
+  max-width: 600px; /* Prevent testimonials from becoming too wide */
+  width: 90%; /* Take up 90% of the container width */
 }
 
 #testimonials .testimonial img {
-  width: 70px;
-  float: left;
+  display: block;
+  width: 70px; /* Fixed size for images */
+  height: 70px; /* Ensure height matches width for perfect circle */
   margin-right: 20px;
   border-radius: 50%; 
+  object-fit: cover; /* Ensure image fits within circle without stretching */
+  float: left; /* Keeps the image on the left side */
+}
 
+#testimonials .testimonial p {
+  text-align: justify; /* Align the text properly */
+  line-height: 1.4; /* Reduced line-height for tighter spacing between lines */
+  letter-spacing: 0.5px; /* Adjust letter-spacing to reduce the gap between letters */
+  margin-top: 10px; /* Small top margin for better spacing */
+}
+
+/* Mobile responsiveness for testimonials */
+@media (max-width: 768px) {
+  #testimonials .testimonial {
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px auto;
+  }
+
+  #testimonials .testimonial img {
+    max-width: 100px; /* Increase image size slightly on small screens */
+    margin-right: 15px;
+  }
 }
 
 /* contact */
